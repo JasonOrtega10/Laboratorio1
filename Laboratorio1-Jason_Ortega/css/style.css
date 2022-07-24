@@ -1,0 +1,140 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --colorTextos: #7e7e7e;
+    --colorBotones: #f69229;
+    --colorFondo: #5d8a9f;
+    --paddingSecciones: 60px 0; /* cuando hay 4 valores es arriba, derecha, abajo y izquierda, cuando solo hay 2 valores es: arriba y abajo, derecha e izquierda */
+    --marginElementos: 40px;
+}
+
+/* GENERALES */
+body{
+    font-family:'Lato', 'sans-serif'
+}
+.contenedor{
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    overflow: hidden; /* para ver si se necesita scroll o se ponga el contenido en un bloque, en este caso el hidden hace que se adapte el contenedor*/
+    padding: var(--paddingSecciones);
+}
+
+/* navegacion */
+.menu-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    height: 70%;
+}
+.logo{
+    height: 80px;
+}
+.logo img{
+    display: block;
+    height: 100%;
+}
+.enlaces li{
+    display: inline-block; /* para darle una anchura al elemento */
+    list-style: none; /* para quitar el puntito */
+}
+.enlaces a{
+    text-decoration: none; /* para quitar el subrrayado */
+    padding-left: 10px;
+    color: var(--colorTextos);
+}
+.enlaces a:hover{
+    text-decoration:underline;
+}
+.hero{
+    height: 500px;
+    background-image: url(../img/imagen-felxbox-min.png); /* agregamos una imagen de fondo */
+    background-repeat: no-repeat; /* para que no se repita la imagen */
+    background-position: center; /* centrar la imagen */
+    background-size: cover; /* para que la imagen se ajuste al contenedor */
+    background-attachment: fixed; /* determina si la posición de la imagen de fondo será fija dentro de la pantalla o se desplazará con su bloque contenedor. */
+}
+.contenedor-textos{
+    padding: 0; /* eliminamos el padding */
+    height: 100%;
+    display: flex; /* habilitamos el flex */
+    flex-direction: column; /* para que el contenido se pongo en columna */
+    align-items: center; /* para que se centre de derecha a izquierda  */
+    justify-content: center; /* para que se centr de arriba para abajo */
+    text-align: center; /* para que el texto se alinie al centro y no se quede a la izquierda */
+    color: #fff;
+}
+.hero h1{
+    font-size: 60px;
+    font-weight:700;
+}
+.hero p{
+    font-size: 20px;
+    font-weight:300;
+    margin: 15px 0;
+}
+.boton{
+    width: 150px;
+    background-color: var(--colorBotones);
+    margin: 0 auto;
+    padding: 15px 0;
+    border-radius: 10px;
+    color: #fff;
+    text-decoration: none;
+}
+
+/* NOSOTROS */
+.titulo-seccion{
+    text-align: center;
+
+}
+.titulo-seccion h2,
+.contenedor-servicios h2{
+    margin-top: 20px;
+    font-size: 40px;
+}
+
+.titulo-seccion p{
+    margin: 100px auto;
+
+}
+
+/* SERVICIOS */
+.fondo-servicios{
+    text-align: center;
+    background-color: #f2f2f2;
+}
+.servicios{
+    
+    padding-top: var(--marginElementos);
+    display: flex;
+    justify-content: space-evenly; /* para que los elementos se pongan en fila */
+    flex-wrap: wrap; /* en este caso con wrap sirve que cuando los elementos no caben en la fila hace que los que ya no caben bajen a la siguiente fila */
+}
+
+.servicio{
+    font-size: 20px;
+    width: 10em;
+    height: 10em;
+    background-image: url(../img/imagen-felxbox-min.png);
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%; /* ponemos un borde de 50% para que se haga un circulo */
+    display:flex;
+    align-items: center; /* centramos de arriba para abajo */
+    justify-content: center; /* centramos de derecha a izquierda */
+    color: #fff;
+}
+
+/* CONTACTO */
+footer{
+    background-image: url(../img/imagen-felxbox-min.png);
+    background-position: center;
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+}
